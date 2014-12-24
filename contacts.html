@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <meta name="viewport" content="width=1200"> -->
+	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+	<link rel="stylesheet" media="all" href="css/screen.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+	<script type="text/javascript">
+		var map;
+		function initialize() {
+			var mapOptions = {
+				center: new google.maps.LatLng(55.7077043,37.6540567),
+				scrollwheel: false,
+				navigationControl: true,
+				mapTypeControl: true,
+				scaleControl: true,
+				draggable: true,
+				mapTypeId: google.maps.MapTypeId.ROADMAP,
+				mapTypeControl: true,
+					mapTypeControlOptions: {
+						style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+						position: google.maps.ControlPosition.BOTTOM_LEFT
+					},
+				zoom: 17,
+				zoomControlOptions: {
+						style: google.maps.ZoomControlStyle.SMALL,
+						position: google.maps.ControlPosition.LEFT_CENTER
+				    },
+				panControl: true,
+					panControlOptions: {
+						position: google.maps.ControlPosition.RIGHT_CENTER
+				},
+			};
+			map = new google.maps.Map(document.getElementById('map-canvas'),
+				mapOptions);
+			var image = {
+			    url: 'img/icons/marker.png',
+			    size: new google.maps.Size(60, 72),
+			    anchor: new google.maps.Point(-20, 36)
+			  };
+			marker = new google.maps.Marker({
+				map: map,
+				icon: image,
+				draggable: true,
+				animation: google.maps.Animation.DROP,
+				position: new google.maps.LatLng(55.7077043,37.6540567)
+			});
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	<!-- begin header  -->
+	<header class="header header_mod">
+		<div class="topper">
+			<div class="inner">
+				<a href="#" class="logo">
+					<img src="img/logo.png" alt="" class="logo__big">
+					<img src="img/logo-small.png" alt="" class="logo__small">
+				</a>
+				<a href="#" class="search-icon"></a>
+				<button class="nav-btn js-nav_btn"><span></span></button>
+				<ul class="nav js-nav">
+					<li><a href="#" class="nav__item">О компании</a></li>
+					<li><a href="#" class="nav__item nav__service">Услуги</a></li>
+					<li><a href="#" class="nav__item">Вопрос-ответ</a></li>
+					<li><a href="#" class="nav__item">Калькулятор цен</a></li>
+					<li><a href="#" class="nav__item is-active">Контакты</a></li>
+					<li><a href="#" class="nav__item">магазин</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="inner">
+			<div class="header__feedback">
+				<span class="phone">7 (495) 981-63-23</span>
+				<ul class="feedback-wrapper">
+					<li class="feedback">
+						<a href="#">
+							<span class="feedback__icon"><i class="is-call"></i></span>
+							<span class="feedback__text">Заказать звонок</span>
+						</a>
+					</li>
+					<li class="feedback">
+						<a href="#">
+							<span class="feedback__icon"><i class="is-question"></i></span>
+							<span class="feedback__text">Задать вопрос</span>
+						</a>
+					</li>
+					<li class="feedback">
+						<a href="#">
+							<span class="feedback__icon"><i class="is-application"></i></span>
+							<span class="feedback__text">Оставить заявку</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="submenu service">
+				<button class="submenu__btn"><span></span></button>
+				<ul>
+					<li class="service__item">
+						<a href="#">
+							<div class="service__icon"><img src="img/icon-service.png" alt=""></div>
+							<span>IT услуги</span>
+						</a>
+					</li>
+					<li class="service__item">
+						<a href="#">
+							<div class="service__icon"><img src="img/icon-wifi.png" alt=""></div>
+							<span>Создание сети Wi-Fi</span>
+						</a>
+					</li>
+					<li class="service__item">
+						<a href="#">
+							<div class="service__icon"><img src="img/icon-ethernet.png" alt=""></div>
+							<span> Создание сети Ethernet</span>
+						</a>
+					</li>
+					<li class="service__item">
+						<a href="#">
+							<div class="service__icon"><img src="img/icon-other.png" alt=""></div>
+							<span>Прочие товары и услуги</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- end header -->
+	<!-- begin map  -->
+	<section class="map">
+		<div class="title">
+			<div class="inner">
+				<h1>Контактная информация</h1>
+				<h3>115280 Москва, ул. Ленинская Слобода, д. 19, стр. 4. Вход со стороны 3-го Автозаводского проезда.</h3>
+				<h3>Телефон: +7 (495) 981-63-23,  e-mail: <a href="#">info@shels-m.ru</a></h3>
+			</div>
+		</div>
+		<div id="map-canvas" class="map__inner"></div>
+	</section>
+	<!-- end map -->
+</div>
+<!-- END out-->
+<!-- begin footer  -->
+<footer class="footer">
+	<div class="inner">
+		<div class="footer__box">
+			<span class="copyright">© 2014. ООО <br>«Штрих Элит Сервис».</span>
+			<div class="footer__contacts">
+				<span class="footer__phone">7 (495) 981-63-23</span>
+				<span class="footer__mail">info@shels-m.ru</span>
+			</div>
+		</div>
+		<ul class="footer__list">
+			<li><a href="#">О компании</a></li>
+			<li><a href="#">Вопрос-ответ</a></li>
+			<li><a href="#">Калькулятор цен</a></li>
+			<li><a href="#">Контакты</a></li>
+			<li><a href="#">Магазин</a></li>
+		</ul>
+		<ul class="footer__list">
+			<li><a href="#">It услуги</a></li>
+			<li><a href="#">Создание сети Wi-Fi</a></li>
+			<li><a href="#">Создание сети Ethernet</a></li>
+			<li><a href="#">Прочие товары и услуги</a></li>
+		</ul>
+		<ul class="footer__list">
+			<li><a href="#">Заказать звонок</a></li>
+			<li><a href="#">Задать вопрос</a></li>
+			<li><a href="#">Отставить заявку</a></li>
+			<li><a href="#">Обратная связь</a></li>
+		</ul>
+		<div class="footer__box footer__box_mod">
+			<div class="footer__social">
+				<a href="#" class="is-fb"></a>
+				<a href="#" class="is-vk"></a>
+				<a href="#" class="is-twitter"></a>
+			</div>
+			<div class="footer__made">
+				<a href="#">Разработка сайта— qb-interactive</a>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- end footer -->
+<!-- load scripts -->
+<script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+</body>
+</html>

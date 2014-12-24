@@ -52,28 +52,239 @@ body
 	font-family: Arial, sans-serif 
 	font-size: 12px 
 	line-height: 1.4
+	&.is-fixed
+		position: fixed
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		overflow: hidden
+	&.is-error
+		height: 100%
+// fonts
+
++font("HelveticaNeue Medium", helveticaneuecyr-medium)
+=med
+	font-family: "HelveticaNeue Medium", Helvetica, sans-serif
++font("HelveticaNeue Roman", helveticaneuecyr-roman)
+=rom
+	font-family: "HelveticaNeue Roman", Helvetica, sans-serif
++font("HelveticaNeue Bold", helveticaneuecyr-bold)
+=bold
+	font-family: "HelveticaNeue Bold", Helvetica, sans-serif
++font("HelveticaNeue Thin", helveticaneuecyr-thin)
+=thin
+	font-family: "HelveticaNeue Thin", Helvetica, sans-serif
++font("HelveticaNeue Light", helveticaneuecyr-light)
+=light
+	font-family: "HelveticaNeue Light", Helvetica, sans-serif
 
 
-// common blocks      
+=ttu
+	text-transform: uppercase
+
+a
+	text-decoration: none
+
+h1, h2, h3, h4, h5, h6, strong, b
+	font-weight: normal
+h1
+	+fs(48)
+	line-height: 1
+	+thin
+	color: #414141 
+	+r(768)
+		+fs(42)
+h2
+	+light
+	+fs(33)
+	line-height: 1.21
+	color: #414141 
+	+r(768)
+		+fs(28)
+h3
+	+thin
+	+fs(24)
+	line-height: 1.25
+	color: #4f4f4f
+	+r(768)
+		+fs(20)
+	a
+		color: #fb7b1e
+		display: inline-block
+		line-height: 1
+		&:hover
+			border-bottom: 1px solid #fb7b1e
 
 
+//mod
+.btn
+	padding: 14px 18px 14px 
+	background-color: #FB7B1E
+	color: #fff
+.btn, .btn-orange
+	+med
+	+ttu
+	+fs(14)
+	line-height: 16px
+	display: inline-block
+	position: relative
+	&:active
+		top: 1px
+	&.is-active
+		color: #fff
+		background: #bebebe  
+.btn-orange
+	padding: 13px 17px 13px
+	border: 1px solid #fb7b1e
+	color: #fb7b1e   
 
 
+//select
+.select
+	position: relative
+	cursor: pointer
+	text-align: left
+	width: 100%
+	background-color: #FFF
+	border: 1px solid #D3D2D2
+	+border-radius(1px)
+	+box-shadow(0 2px 0 rgba(255, 255, 255, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.1))
+	+fs(16)
+	line-height: 1.125
+	+rom
+	color: #333333
+	padding: 9px 24px 7px 12px
+	+user-select(none)
+	+box
+	height: 38px
+	+g(#fbfbfb, #edeff1)
+	margin-top: -1px 
+	i
+		+s(arrows)
+		position: absolute
+		top: 50%
+		margin-top: -10px
+		right: 9px 
+.select__text
+	position: relative
+	display: block
+	vertical-align: middle
+.select__list
+	position: absolute
+	display: none
+	top: 100%
+	left: -1px
+	right: -1px
+	z-index: 100
+	background-color: #FFF
+	border: 1px solid #D3D2D2
+	+border-radius(1px)
+	+box-shadow(inset 0 0 5px rgba(1, 1, 1, 0.2))
+	border-top: none 
+	max-height: 200px
+	overflow-x: hidden
+	overflow-y: auto
+	margin: 1px 0 0 0 
+	li
+		padding: 9px 12px 7px 
+		cursor: pointer
+		&:hover
+			background: #d7d7d7
+			color: #fff
+//input
+.input
+	width: 100%
+	background-color: #FFF
+	border: 1px solid #D3D2D2
+	+border-radius(1px)
+	+box-shadow(inset 0 0 5px rgba(1, 1, 1, 0.2))
+	+fs(16)
+	line-height: 1.125
+	+rom
+	color: #333333
+	padding: 9px 12px 7px  
+	+box
+textarea
+	height: 121px 
+	resize: none
+//label
+.label
+	width: 100%
+	+box
+	.label__title
+		+rom
+		+fs(16)
+		line-height: 1.125
+		color: #8b8b8b
+		margin-bottom: 9px
+		display: block
 
 
+//checkbox
+.checkbox
+	display: inline-block
+	position: relative
+	cursor: pointer
+	+user-select(none)
+	min-height: 23px 
+	+vertical
+	text-align: left
+	z-index: 100 
+	input
+		+opacity(0)
+		width: 23px
+		height: 23px
+		display: inline-block
+		vertical-align: middle
+		position: relative
+		z-index: 7
+		cursor: pointer
+		margin-right: 10px
+		&:checked
+			+ .checkbox__title
+				&:after
+					visibility: visible
+					+opacity(1)
+				&:before
+					background: #fb7b1e 
+					border-color: #fb7b1e 
+					+box-shadow(none)
+	&:hover
+		.checkbox__title
+			color: #fb7b1e 
 
-
-
-
-
-
-
-
-
-
-
-
-
+.checkbox__title
+	display: inline-block
+	vertical-align: middle
+	+rom
+	+fs(18)
+	line-height: 1
+	color: #333 
+	padding: 0
+	&:before
+		content: ""
+		position: absolute
+		left: 0
+		top: 0
+		width: 21px
+		height: 21px
+		background-color: #F5F5F5
+		background-image: -moz-linear-gradient(bottom, #D8D8D8 0%, #FBFCFD 100%)
+		background-image: -o-linear-gradient(bottom, #D8D8D8 0%, #FBFCFD 100%)
+		background-image: -webkit-linear-gradient(bottom, #D8D8D8 0%, #FBFCFD 100%)
+		background-image: linear-gradient(to top, #D8D8D8 0%, #FBFCFD 100%)
+		border: 1px solid rgba(157, 171, 184, 0.67)
+		+box-shadow(1px 1.7px 0 rgba(255, 255, 255, 0.47), inset 0 2px 0 #FFF)
+	&:after
+		content: ""
+		position: absolute
+		+s(ckecked)
+		top: 7px
+		left: 5px
+		z-index: 5
+		visibility: hidden
+		+opacity(0)
 
 
 

@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <meta name="viewport" content="width=1200"> -->
+	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+	<link rel="stylesheet" media="all" href="css/screen.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+<div class="popup-wrap js-popup">	
+	<div class="overlay"></div>
+	<div class="popup">
+		<i class="popup__close js-popup-close"></i>
+		<div class="popup__top">
+			<span class="popup__heading">Задать свой вопрос</span>
+		</div>
+		<div class="popup__body">
+			<form action="">
+				<div class="field">
+					<div class="label">
+						<label>
+							<span class="label__title">Имя</span>
+							<input type="text" class="input">
+						</label>
+					</div>
+				</div>
+				<div class="field field__phone">
+					<div class="label">
+						<div class="label__inner">
+							<span class="label__title">Номер телефона </span>
+							<input type="text" class="input input__fix">
+							<div>
+								<input type="text" class="input input__res">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="field field__mail">
+					<div class="label">
+						<label>
+							<span class="label__title">Электронная почта</span>
+							<input type="text" class="input">
+						</label>
+					</div>
+				</div>
+				<div class="field">
+					<div class="label">
+						<label>
+							<span class="label__title">Ваш вопрос</span>
+							<textarea cols="30" rows="10" class="input"></textarea>
+						</label>
+					</div>
+				</div>
+				<div class="popup__btns">
+					<button class="btn">отправить</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="popup popup_success">
+		<div class="popup__icon is-checked">
+			<i></i>
+		</div>
+		<h3>Ваш вопрос успешно отправлен нам и скоро мы опубликуем ответ</h3>
+	</div>
+</div>
+<!-- BEGIN  out-->
+<div class="out">
+	<!-- begin header  -->
+	<header class="header header_mod">
+		<div class="topper">
+			<div class="inner">
+				<a href="#" class="logo">
+					<img src="img/logo.png" alt="" class="logo__big">
+					<img src="img/logo-small.png" alt="" class="logo__small">
+				</a>
+				<a href="#" class="search-icon"></a>
+				<button class="nav-btn js-nav_btn"><span></span></button>
+				<ul class="nav js-nav">
+					<li><a href="#" class="nav__item">О компании</a></li>
+					<li><a href="#" class="nav__item nav__service">Услуги</a></li>
+					<li><a href="#" class="nav__item is-active">Вопрос-ответ</a></li>
+					<li><a href="#" class="nav__item">Калькулятор цен</a></li>
+					<li><a href="#" class="nav__item">Контакты</a></li>
+					<li><a href="#" class="nav__item">магазин</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="inner">
+			<div class="header__feedback">
+				<span class="phone">7 (495) 981-63-23</span>
+				<ul class="feedback-wrapper">
+					<li class="feedback">
+						<a href="#">
+							<span class="feedback__icon"><i class="is-call"></i></span>
+							<span class="feedback__text">Заказать звонок</span>
+						</a>
+					</li>
+					<li class="feedback">
+						<a href="#">
+							<span class="feedback__icon"><i class="is-question"></i></span>
+							<span class="feedback__text">Задать вопрос</span>
+						</a>
+					</li>
+					<li class="feedback">
+						<a href="#">
+							<span class="feedback__icon"><i class="is-application"></i></span>
+							<span class="feedback__text">Оставить заявку</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="submenu service">
+				<button class="submenu__btn"><span></span></button>
+				<ul>
+					<li class="service__item">
+						<a href="#">
+							<div class="service__icon"><img src="img/icon-service.png" alt=""></div>
+							<span>IT услуги</span>
+						</a>
+					</li>
+					<li class="service__item">
+						<a href="#">
+							<div class="service__icon"><img src="img/icon-wifi.png" alt=""></div>
+							<span>Создание сети Wi-Fi</span>
+						</a>
+					</li>
+					<li class="service__item">
+						<a href="#">
+							<div class="service__icon"><img src="img/icon-ethernet.png" alt=""></div>
+							<span> Создание сети Ethernet</span>
+						</a>
+					</li>
+					<li class="service__item">
+						<a href="#">
+							<div class="service__icon"><img src="img/icon-other.png" alt=""></div>
+							<span>Прочие товары и услуги</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- end header -->
+	<!-- begin question  -->
+	<section class="question">
+		<div class="title">
+			<div class="inner">
+				<h1>Вопрос-ответ</h1>
+				<h2>Тут вы можете найти ответы на все ваши вопросы и так же задать свой</h2>
+			</div>
+		</div>
+		<div class="inner">
+			<div class="box-wrapper">
+				<div class="box js-accordion">
+					<a href="#" class="box__link js-accordion-title">Нами была проведена большая работа по классификации и структурированию товарного ассортимента?</a>
+					<div class="box__hide js-accordion-body">
+						<span class="box__answer">Ответ:</span>
+						<p>Наша компания входит в группу компаний «Штрих-М» и является официальным Центром Розничных Продаж, Сервисным Центром и Центром Технического Обслуживания компании «Штрих-М» - ведущего Российского производителя Контрольно-Кассовой Техники и Торгового оборудования. Практика нашей работы показывает, что основными составляющими конкурентных преимуществ на рынке торгового оборудования является сочетание таких направлений, как продажа, обслуживание, внедрение  и сервис. Поэтому, наша компания держит курс на развитие и расширение именно этих направлений. Благодарим Вас за посещение нашего Сайта, который тематически.</p>
+					</div>
+				</div>
+				<div class="box js-accordion">
+					<a href="#" class="box__link js-accordion-title">На момент открытия сайта, в каталоге товаров мы разместили основные товарные группы, составляющие только часть нашего?</a>
+					<div class="box__hide js-accordion-body">
+						<span class="box__answer">Ответ:</span>
+						<p>Наша компания входит в группу компаний «Штрих-М» и является официальным Центром Розничных Продаж, Сервисным Центром и Центром Технического Обслуживания компании «Штрих-М» - ведущего Российского производителя Контрольно-Кассовой Техники и Торгового оборудования. Практика нашей работы показывает, что основными составляющими конкурентных преимуществ на рынке торгового оборудования является сочетание таких направлений, как продажа, обслуживание, внедрение  и сервис. Поэтому, наша компания держит курс на развитие и расширение именно этих направлений. Благодарим Вас за посещение нашего Сайта, который тематически.</p>
+					</div>
+				</div>
+				<div class="box js-accordion">
+					<a href="#" class="box__link js-accordion-title">При необходимости, Вы можете получить профессиональные консультации наших специалистов?</a>
+					<div class="box__hide js-accordion-body">
+						<span class="box__answer">Ответ:</span>
+						<p>Наша компания входит в группу компаний «Штрих-М» и является официальным Центром Розничных Продаж, Сервисным Центром и Центром Технического Обслуживания компании «Штрих-М» - ведущего Российского производителя Контрольно-Кассовой Техники и Торгового оборудования. Практика нашей работы показывает, что основными составляющими конкурентных преимуществ на рынке торгового оборудования является сочетание таких направлений, как продажа, обслуживание, внедрение  и сервис. Поэтому, наша компания держит курс на развитие и расширение именно этих направлений. Благодарим Вас за посещение нашего Сайта, который тематически.</p>
+					</div>
+				</div>
+				<div class="box js-accordion">
+					<a href="#" class="box__link js-accordion-title">Нами была проведена большая работа по классификации и структурированию товарного ассортимента?</a>
+					<div class="box__hide js-accordion-body">
+						<span class="box__answer">Ответ:</span>
+						<p>Наша компания входит в группу компаний «Штрих-М» и является официальным Центром Розничных Продаж, Сервисным Центром и Центром Технического Обслуживания компании «Штрих-М» - ведущего Российского производителя Контрольно-Кассовой Техники и Торгового оборудования. Практика нашей работы показывает, что основными составляющими конкурентных преимуществ на рынке торгового оборудования является сочетание таких направлений, как продажа, обслуживание, внедрение  и сервис. Поэтому, наша компания держит курс на развитие и расширение именно этих направлений. Благодарим Вас за посещение нашего Сайта, который тематически.</p>
+					</div>
+				</div>
+				<div class="box js-accordion">
+					<a href="#" class="box__link js-accordion-title">Нами была проведена большая работа по классификации?</a>
+					<div class="box__hide js-accordion-body">
+						<span class="box__answer">Ответ:</span>
+						<p>Наша компания входит в группу компаний «Штрих-М» и является официальным Центром Розничных Продаж, Сервисным Центром и Центром Технического Обслуживания компании «Штрих-М» - ведущего Российского производителя Контрольно-Кассовой Техники и Торгового оборудования. Практика нашей работы показывает, что основными составляющими конкурентных преимуществ на рынке торгового оборудования является сочетание таких направлений, как продажа, обслуживание, внедрение  и сервис. Поэтому, наша компания держит курс на развитие и расширение именно этих направлений. Благодарим Вас за посещение нашего Сайта, который тематически.</p>
+					</div>
+				</div>
+				<div class="box js-accordion">
+					<a href="#" class="box__link js-accordion-title">В нашем Центре Технического Обслуживания Контрольно-Кассовой Техники (ЦТО ККТ), Вы сможете заключить договор на обслуживание?</a>
+					<div class="box__hide js-accordion-body">
+						<span class="box__answer">Ответ:</span>
+						<p>Наша компания входит в группу компаний «Штрих-М» и является официальным Центром Розничных Продаж, Сервисным Центром и Центром Технического Обслуживания компании «Штрих-М» - ведущего Российского производителя Контрольно-Кассовой Техники и Торгового оборудования. Практика нашей работы показывает, что основными составляющими конкурентных преимуществ на рынке торгового оборудования является сочетание таких направлений, как продажа, обслуживание, внедрение  и сервис. Поэтому, наша компания держит курс на развитие и расширение именно этих направлений. Благодарим Вас за посещение нашего Сайта, который тематически.</p>
+					</div>
+				</div>
+			</div>
+			<div class="question__btns">
+				<a href="#" class="btn js-popup-btn">задать свой вопрос</a>
+			</div>
+		</div>
+	</section>
+	<!-- end question -->
+</div>
+<!-- END out-->
+<!-- begin footer  -->
+<footer class="footer">
+	<div class="inner">
+		<div class="footer__box">
+			<span class="copyright">© 2014. ООО <br>«Штрих Элит Сервис».</span>
+			<div class="footer__contacts">
+				<span class="footer__phone">7 (495) 981-63-23</span>
+				<span class="footer__mail">info@shels-m.ru</span>
+			</div>
+		</div>
+		<ul class="footer__list">
+			<li><a href="#">О компании</a></li>
+			<li><a href="#">Вопрос-ответ</a></li>
+			<li><a href="#">Калькулятор цен</a></li>
+			<li><a href="#">Контакты</a></li>
+			<li><a href="#">Магазин</a></li>
+		</ul>
+		<ul class="footer__list">
+			<li><a href="#">It услуги</a></li>
+			<li><a href="#">Создание сети Wi-Fi</a></li>
+			<li><a href="#">Создание сети Ethernet</a></li>
+			<li><a href="#">Прочие товары и услуги</a></li>
+		</ul>
+		<ul class="footer__list">
+			<li><a href="#">Заказать звонок</a></li>
+			<li><a href="#">Задать вопрос</a></li>
+			<li><a href="#">Отставить заявку</a></li>
+			<li><a href="#">Обратная связь</a></li>
+		</ul>
+		<div class="footer__box footer__box_mod">
+			<div class="footer__social">
+				<a href="#" class="is-fb"></a>
+				<a href="#" class="is-vk"></a>
+				<a href="#" class="is-twitter"></a>
+			</div>
+			<div class="footer__made">
+				<a href="#">Разработка сайта— qb-interactive</a>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- end footer -->
+<!-- load scripts -->
+<script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+</body>
+</html>
