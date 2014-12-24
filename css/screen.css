@@ -134,6 +134,7 @@ textarea { height: 121px; resize: none; }
 
 .header__feedback { padding: 45px 0 36px 28px; font-size: 0px; }
 .header__feedback.is-close { display: none; }
+@media only screen and (max-width: 768px) { .header__feedback.is-close { display: block; } }
 @media only screen and (max-width: 1024px) { .header__feedback { padding: 30px 0 30px 14px; } }
 @media only screen and (max-width: 980px) { .header__feedback { padding: 20px 0 20px 10px; } }
 @media only screen and (max-width: 768px) { .header__feedback { text-align: center; font-size: 0; }
@@ -389,6 +390,7 @@ textarea { height: 121px; resize: none; }
 
 .submenu { display: none; padding: 20px 20px 3px 28px; position: relative; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; font-size: 0px; }
 .submenu.is-open { display: block; }
+@media only screen and (max-width: 768px) { .submenu.is-open { display: none; } }
 @media only screen and (max-width: 1024px) { .submenu { padding: 20px 0 3px 14px; } }
 @media only screen and (max-width: 980px) { .submenu { padding: 20px 0 3px 10px; } }
 @media only screen and (max-width: 768px) { .submenu { text-align: center; font-size: 0; }

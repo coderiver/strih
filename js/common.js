@@ -131,8 +131,34 @@ head.ready(function() {
         $(".topper").removeClass("is-fixed");
 	};
 	//nav hover
-	$('.nav__service').mouseenter(function() {
-		$('.service').addClass('is-open');
+	$('.js-service').mouseenter(function() {
+		$('.submenu').removeClass('is-open');
+		$('.is-service').addClass('is-open');
+		$('.header__feedback').addClass('is-close');
+	});
+	$('.js-team').mouseenter(function() {
+		$('.submenu').removeClass('is-open');
+		$('.is-team').addClass('is-open');
+		$('.header__feedback').addClass('is-close');
+	});
+	$('.js-answer').mouseenter(function() {
+		$('.submenu').removeClass('is-open');
+		$('.is-answer').addClass('is-open');
+		$('.header__feedback').addClass('is-close');
+	});
+	$('.js-calculator').mouseenter(function() {
+		$('.submenu').removeClass('is-open');
+		$('.is-calculator').addClass('is-open');
+		$('.header__feedback').addClass('is-close');
+	});
+	$('.js-contacts').mouseenter(function() {
+		$('.submenu').removeClass('is-open');
+		$('.is-contacts').addClass('is-open');
+		$('.header__feedback').addClass('is-close');
+	});
+	$('.js-shop').mouseenter(function() {
+		$('.submenu').removeClass('is-open');
+		$('.is-shop').addClass('is-open');
 		$('.header__feedback').addClass('is-close');
 	});
 	$('.submenu').mouseleave(function() {
