@@ -31,7 +31,9 @@ head.ready(function() {
 		};
 		return false;
 	});
-
+	nav.mouseleave(function() {
+		nav.removeClass('is-active')
+	});
 	//select
 	$(document).ready(function() {
 	    $(document).click(function() {
